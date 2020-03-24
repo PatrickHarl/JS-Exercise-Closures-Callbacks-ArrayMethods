@@ -406,8 +406,26 @@ function counter2() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(limit) {
+  let count = 0;
+  let max = limit;
+  let maxCount = 0;
+
+  return function counter(){
+    
+    if(count < max)
+    {
+
+      return count++;
+
+    }
+
+    maxCount = count;
+    count = 0;
+
+    return maxCount;
+    
+  };
 }
 
 /////////////// END OF CHALLENGE ///////////////
